@@ -1,5 +1,5 @@
 function [approx, val] = trap_rule_fixpow(A, f, exponent)
-%% Application of the trapezoidal rule for the approximation of the integral
+% Application of the trapezoidal rule for the approximation of the integral
 % A = cell array containing the matrix coefficients
 % f = function handling the analytic functions
 % exponent = exponent we are considering
