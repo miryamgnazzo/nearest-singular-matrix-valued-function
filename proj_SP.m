@@ -1,5 +1,5 @@
 function M_Proj = proj_SP(M, P)
-%% Project onto the structure (sparsity pattern)
+% Project onto the structure (sparsity pattern)
 % P = Cell array containing sparsity structure (1-0 structure)
 % M = Cell array containing the coefficient matrices to project
 
