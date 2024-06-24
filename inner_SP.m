@@ -1,6 +1,6 @@
 function [F_vec, F_der, Delta, iterations,h_vec, Norms,Diff_Norm] = inner_SP(Delta_in, A, f, mu, epsilon, tol, P, complex)
-%% Script for inner iteration, including the one for sparstity pattern
-%% It minimizes the functional, by using a constrained steepest descent method
+% Script for inner iteration, including the one for sparstity pattern
+% It minimizes the functional, by using a constrained steepest descent method
 % Delta_in = initial perturbations
 % A = cell array containing the matrix coefficients
 % f = function handling the analytic functions
