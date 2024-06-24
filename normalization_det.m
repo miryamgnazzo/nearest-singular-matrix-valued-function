@@ -1,5 +1,5 @@
 function [A_new, DD, Max_det] = normalization_det(A, f, N)
-%% Normalization of the determinant on the unit disk
+% Normalization of the determinant on the unit disk
 % A = cellarray with the coefficients
 % f = analytic functions
 % N = number of points
