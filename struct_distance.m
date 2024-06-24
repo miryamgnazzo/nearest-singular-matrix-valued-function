@@ -1,5 +1,5 @@
 function [distance,Pert,counter,iter_tot,fin_points,max_needed_points,DD]=struct_distance(A, f, threshold, tol_appr, tol_sing, str, complex)
-%% APPROXIMATION DISTANCE TO SINGULARITY FOR MATRIX-VALUED FUNCTIONS
+% APPROXIMATION DISTANCE TO SINGULARITY FOR MATRIX-VALUED FUNCTIONS
 % A = cell array containing the matrix coefficients
 % f = function handling the analytic functions
 % threshold = threshold for recompute the number of points
