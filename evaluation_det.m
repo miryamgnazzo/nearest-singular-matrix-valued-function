@@ -1,5 +1,5 @@
 function eval = evaluation_det(A,f, vec_lam)
-%% Evaluation of the determinant at points vec_lam
+% Evaluation of the determinant at points vec_lam
 % A = cell array containing the matrix coefficients
 % f = function handling the analytic functions
 % vec_lam = points we evaluate at
