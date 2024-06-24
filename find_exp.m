@@ -1,5 +1,5 @@
 function [exponent,int] = find_exp(A, f, tol)
-%% Finds the exponential m, which we can use to truncate the Taylor series of the determinant
+% Finds the exponential m, which we can use to truncate the Taylor series of the determinant
 % A = cell array containing the matrix coefficients
 % f = function handling the analytic functions
 % tol = tolerance we ask in the approximation of the determinant
