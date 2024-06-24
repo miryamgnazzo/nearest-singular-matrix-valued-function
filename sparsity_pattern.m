@@ -1,5 +1,5 @@
 function P = sparsity_pattern(A)
-%% Recognize sparsity pattern and collect it in the 1-0 cell array P
+% Recognize sparsity pattern and collect it in the 1-0 cell array P
 % A = cell array of the coefficient
 
 N = size(A{1},1);
