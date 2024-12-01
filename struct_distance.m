@@ -26,9 +26,20 @@ P = repmat({zeros(n)},1,length(A));
         P = sparsity_pattern(A);
     end
 
-
 %FIND the initial number of needed points
-[d , coef_Tay] = find_exp(A, f, tol_appr);
+[d , coef_Tay] = find_exp_start(A, f, tol_appr);
+
+Num_check = 10;
+error = discret_domain_double(Num_check, d, A, f);
+fprintf('DISCRETIZATION %d ---> \n', error)
+
+while (error > tol_appr)
+    [d , coef_Tay] = find_exp_start(A, f, tol_appr, d+1);
+    error = discret_domain_double(Num_check, d, A, f);
+end
+
+
+fprintf('VAL Coeff Tay %d ---> \n', abs(coef_Tay))
 
 max_needed_points = d;
 
@@ -189,8 +200,19 @@ while (dist_epsilon > 1e-6)&&(iter_tot<=30)
     if (increase > threshold)
         
         %CHECK on the number of needed points
-        [d_check , coef_check] = find_exp(M_new, f, tol_appr);
-        
+        [d_check , coef_check] = find_exp_start(M_new, f, tol_appr);
+
+        %check error in the discretization       
+        error_check = discret_domain_double(Num_check, d_check, M_new, f);
+        fprintf('DISCRETIZATION %d ---> \n', error_check)
+
+        while (error_check > tol_appr)
+            [d_check , coef_check] = find_exp_start(M_new, f, tol_appr, d_check+1);
+            error_check = discret_domain_double(Num_check, d_check, M_new, f);
+        end
+
+        fprintf('VAL Coeff Tay %d ---> \n', abs(coef_check))
+
         fprintf('INCREASE %d ---> \n', increase)
         fprintf('number of NEW points %d with |a_n| %d \n \n ', d_check, coef_check)
         

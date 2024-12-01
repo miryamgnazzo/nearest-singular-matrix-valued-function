@@ -1,6 +1,5 @@
 %EXAMPLE 
-
-n = 2;
+n= 2;
 rng(2)
 
 A2 = randn(n);
